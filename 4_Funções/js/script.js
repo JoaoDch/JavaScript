@@ -109,3 +109,4 @@ const raizQuadrada2 = (n) => n * n;
 console.log (raizQuadrada(22));
 console.log (raizQuadrada2(9));
 
+
