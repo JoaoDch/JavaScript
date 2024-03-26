@@ -109,4 +109,66 @@ const raizQuadrada2 = (n) => n * n;
 console.log (raizQuadrada(22));
 console.log (raizQuadrada2(9));
 
+// 7 - Parametro opcional
+
+const multiplication = function (n, m) {
+  if (n === undefined) {
+    return m * 2;
+  } else {
+    return n * 2;
+  }
+};
+
+console.log (multiplication(4, 4));
+console.log (multiplication(4));
+
+const greeting = (name) => {
+  if (!name) {
+    console.log ("Olá!");
+    return;
+  }
+
+  console.log (`Olá ${name}!`)
+}
+
+greeting ();
+greeting ("João");
+
+// 8 - Valor Default
+
+// Parametro "greet" com valor padrão "Olá", caso chamarmos a função com outro valor, será subtituido, caso nenhum valor ser informado, seguirá com o valor padrão "Olá"
+const customGreeting = (name, greet = "Olá") => {
+  return `${name}, ${greet}!`;
+};
+
+console.log(customGreeting ("João", "Bom dia"));
+
+
+// Outro exemplo
+const repeatText = (text, repeat = 5) => {
+  for (let i = 0; i < repeat; i++) {
+    console.log(text)
+  }
+};
+
+repeatText("Testando")
+
+repeatText("Repetindo 225 vezes", 225)
+
+// 9 - Closure
+
+function someFunction () {
+  let txt = "Alguma Coisa";
+
+  function display () {
+    console.log (txt)
+  }
+
+  display ();
+}
+
+someFunction()
+
+
+
 
