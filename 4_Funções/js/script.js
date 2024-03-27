@@ -202,16 +202,20 @@ const untilTen = (n, m) => {
 
 untilTen(100, 7);
 
-function factorial (x) {
-  if (x === 0) {
-    return 1
+
+// Outro exemplo
+function factorial (n) {
+  if (n === 0) {
+  return 1
   } else {
-    return x * factorial (x -1);
-  }
+  return n * factorial (n - 1);
+  };
 }
 
-const num = 6;
+const num = 9
 
-const result = factorial(num)
+const result = factorial (num)
 
-console.log (`O fatorial do número ${num} é ${result}`);
+console.log (`O factorial do número: ${num} é ${result}`)
+
+
