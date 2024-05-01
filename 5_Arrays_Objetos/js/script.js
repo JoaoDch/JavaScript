@@ -210,3 +210,188 @@ console.log(subArray3);
 const subArray4 = testeSlice.slice(2);
 
 console.log(subArray4);
+
+// 15 - ForEach
+
+const nums = [1, 2, 3, 4, 5]
+
+nums.forEach((numero) => {
+    console.log(`O número é ${numero}`)
+});
+
+const posts = [
+    {title: "Primeiro post", category: "PHP"},
+    {title: "Segundo post", category: "Java"},
+    {title: "Terceiro post", category: "React"},
+]
+
+posts.forEach((post) => {
+    console.log(`Exibindo posts: ${post.title}, da categoria ${post.category}.`)
+})
+
+
+// 16 - Include
+
+const  brands = ["Nike", "Adidas", "Puma"]
+
+console.log(brands.includes("Adidas"));
+
+console.log(brands.includes("Vans"));
+
+if(brands.includes("Nike")) {
+    console.log("Há tênis da marca Nike")
+};
+
+
+// 17 - Reverse
+// inverte ordem dos valores da array
+
+const reversetest = [1, 2, 3, 4, 5]
+
+reversetest.reverse();
+
+console.log(reversetest);
+
+// 18 - Trim 
+
+const trimTest = "    testando   \n   " 
+
+console.log(trimTest)
+
+console.log(trimTest.trim());
+
+console.log(trimTest.length);
+
+console.log(trimTest.trim().length);
+
+// 19 - Pad Start
+// Preenche antes do valor chegar ao número de caractéres definido.
+const testePadStart = "1"
+
+const newNumber = testePadStart.padStart(4, "0")
+
+console.log(testePadStart)
+
+console.log(newNumber);
+
+// Pad End - Preenche após chegar ao número de caractéres definido.
+
+const testePadEnd = newNumber.padEnd(10, 0)
+
+console.log(testePadEnd);
+
+// 20 - Split
+// Separa as palavras em lista, como array.
+
+const frase = "O rato roeu a roupa do rei de roma"
+
+const arrayDaFrase = frase.split(" ");
+
+console.log(arrayDaFrase);
+
+// 21 - Join
+
+const fraseDeNovo = arrayDaFrase.join ("");
+
+console.log(fraseDeNovo);
+
+const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`
+
+console.log(fraseDeCompra);
+
+
+// 22 - Repeat 
+const palavra = "Testando "
+
+console.log(palavra.repeat(5));
+
+
+// 23 - rest operator
+
+const somaInfinita = (...args) => {
+
+    let total = 0
+
+    for(let i = 0; i < args.length; i++ ) {
+
+        total += args[i]
+
+    }
+
+    return total;
+};
+
+console.log(somaInfinita(1, 2, 3))
+
+console.log(somaInfinita(1, 20, 35, 100, 21, 28, 871, 101020303))
+
+// 24 - for of
+
+const somaInfinita2 = (...args) => {
+    let total = 0
+
+    for(num of args) {
+        total += num
+    }
+
+    return total;
+}
+
+console.log(somaInfinita2(1, 2, 3, 4));
+
+// 25 - Destructuring Objetos
+
+const userDetails = {
+    firstName: "João",
+    lastName: "Victor",
+    job: "Support Analyst"   
+}
+
+const {firstName, lastName, job} = userDetails
+
+console.log(firstName, lastName, job);
+
+// Renomear Variáveis
+
+const {firstName: primeiroNome } = userDetails;
+
+console.log(firstName);
+
+// 26 - Destructuring com arrays
+
+const myList = ["Avião", "Submarino", "Carro"]
+
+const [veiculoA, veiculoB, veiculoC ] = myList
+
+console.log(veiculoA, veiculoB, veiculoC);
+
+
+// 27 - JSON
+
+const myJson = '{"name": "João", "age": "31", "skills": ["PHP", "JavaScript", "HTML/CSS"]}';
+
+console.log(myJson);
+
+// 28 - Json para objeto e objeto para json
+
+const myObj = JSON.parse(myJson)
+
+console.log(myObj)
+
+// Json invalido
+
+//const badJson = '{"name": "João", "age": 20}'
+
+//const myBadObj = JSON.parse(badJson);
+
+myObj.isOpenToWork = true
+
+console.log(myObj);
+
+const myNewJSON = JSON.stringify(myObj)
+
+console.log(myNewJSON)
+
+console.log(typeof myNewJSON)
